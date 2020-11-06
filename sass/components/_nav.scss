@@ -1,0 +1,48 @@
+header {
+    position: relative;
+
+    // Header 
+    .page-cover {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        h2, {
+            position: relative;
+            font-size: 4rem;
+            color: $color-white;
+            z-index: 10000;
+            font-family: 'Big Shoulders Stencil Display', cursive;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // Navigation menu
+    .nav-menu {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        right: 0;
+    
+    li {
+        list-style: none;
+
+        a{
+            text-decoration: none;
+        }
+        }
+    }
+}
