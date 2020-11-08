@@ -311,6 +311,9 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  font-family: 'Bellota', cursive; }
+
 /* ============================================= */
 /* Components Imports */
 /* ============================================= */
@@ -357,6 +360,16 @@ li {
   0%, 60% {
     visibility: hidden; } }
 
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  50% {
+    transform: translateY(0px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
 @keyframes leftToRight {
   0% {
     opacity: 0;
@@ -383,10 +396,10 @@ header {
       z-index: 10000;
       font-family: 'Big Shoulders Stencil Display', cursive;
       animation: 2s bottomToTop; }
-      header .page-cover h2:last-child {
+      header .page-cover h2:nth-child(2) {
         font-size: 2.5rem;
         animation: 3.5s bottomToTop2; }
-        header .page-cover h2:last-child:hover {
+        header .page-cover h2:nth-child(2):hover {
           transition: transform 0.7s;
           transform: translateY(-5px) scale(1.4);
           box-shadow: 0px 5px 25px 5px rgba(235, 225, 225, 0.611); }
@@ -407,7 +420,7 @@ header {
         background-image: url(../../img/navbar-white.png);
         background-repeat: no-repeat;
         background-size: contain; }
-      header .nav-menu input:checked ~ .menu {
+      header .nav-menu input:checked ~ div .menu {
         visibility: visible;
         animation: 1.5s rightToLeft; }
     header .nav-menu .menu {
@@ -442,15 +455,24 @@ video {
       mix-blend-mode: color-dodge; }
     body .nav-menu input:checked ~ .menu {
       visibility: visible;
-      animation: 1.5s rightToLeft;
+      animation: 1.5s topToBottom;
       flex-direction: column;
       background-color: #3c3131;
       opacity: 0.9;
       align-items: flex-end;
       clip-path: polygon(35% 0, 100% 0%, 100% 100%, 100% 100%); }
-    body .nav-menu .menu {
-      display: flex;
-      flex-direction: row;
-      color: red;
-      justify-content: space-around;
-      visibility: hidden; } }
+    body .nav-menu .menu li {
+      justify-content: space-evenly;
+      font-size: 1.5rem; }
+      body .nav-menu .menu li:nth-child(1) {
+        margin-right: 48%; }
+      body .nav-menu .menu li:nth-child(2) {
+        margin-right: 25%; }
+      body .nav-menu .menu li:nth-child(3) {
+        margin-right: 2%; } }
+
+@media (min-width: 1440px) {
+  body .page-cover h2 {
+    font-size: 6rem; }
+    body .page-cover h2:nth-child(2) {
+      font-size: 4rem; } }

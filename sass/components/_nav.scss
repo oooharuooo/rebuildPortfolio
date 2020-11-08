@@ -20,7 +20,7 @@ header {
             font-family: 'Big Shoulders Stencil Display', cursive;
             animation: 2s bottomToTop;
             
-            &:last-child {
+            &:nth-child(2) {
                 font-size: 2.5rem;
                  animation: 3.5s bottomToTop2;
                  
@@ -51,7 +51,7 @@ header {
                 background-repeat: no-repeat;
                 background-size: contain;
             }
-            &:checked ~ .menu{
+            &:checked ~ div .menu{
                 visibility: visible;
                 animation: 1.5s rightToLeft;
             }

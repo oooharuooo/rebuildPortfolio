@@ -19,7 +19,7 @@
                 }
                 &:checked ~ .menu{
                     visibility: visible;
-                    animation: 1.5s rightToLeft;
+                    animation: 1.5s topToBottom;
                     flex-direction: column;
                     background-color:#3c3131;
                     opacity: 0.9;
@@ -28,12 +28,32 @@
                 }
             }
     
-            .menu {
-                display:flex;
-                flex-direction: row;
-                color:red;
-                justify-content: space-around;
-                visibility: hidden;
+            .menu li {
+                justify-content: space-evenly;
+                font-size: 1.5rem;
+                &:nth-child(1) {
+                    margin-right: 48%;
+                }
+                &:nth-child(2) {
+                    margin-right: 25%;
+                }
+                &:nth-child(3) {
+                    margin-right: 2%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        .page-cover {
+            h2 {
+                font-size: 6rem;
+                
+                &:nth-child(2){
+                    font-size: 4rem;
+                }
             }
         }
     }
