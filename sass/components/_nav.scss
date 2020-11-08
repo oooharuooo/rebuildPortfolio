@@ -18,11 +18,12 @@ header {
             color: $color-white;
             z-index: 10000;
             font-family: 'Big Shoulders Stencil Display', cursive;
-            animation: 2s leftToRight;
+            animation: 2s bottomToTop;
             
             &:last-child {
                 font-size: 2.5rem;
-                animation: 2.5s bottomToTop;
+                 animation: 3.5s bottomToTop2;
+                 
                 &:hover {
                     @include hoverEffect;
                 }
@@ -47,6 +48,8 @@ header {
                 width: 50px;
                 cursor: pointer;	
                 background-image: url(../../img/navbar-white.png);
+                background-repeat: no-repeat;
+                background-size: contain;
             }
             &:checked ~ .menu{
                 visibility: visible;
