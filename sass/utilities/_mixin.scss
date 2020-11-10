@@ -17,3 +17,14 @@
             transform: $translate-100;
         }
 }
+
+@mixin beforeAfter($top,$left,$scale,$width,$height) {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background-color:white;
+    transform: $scale;
+    width: $width;
+    height: $height;
+}

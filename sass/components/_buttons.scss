@@ -1,11 +1,49 @@
-a {
-    text-decoration: none;
-    color: $color-white;
-}
-   
+
 li {
     list-style: none;
+}
+
+.buttonEffect{
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $color-white;
+    border: 2px solid gray;
+    background-color:gray;
+    padding: 15px 30px;
+
     &:hover {
         @include hoverEffect;
     }
+
+    &:before {
+        @include beforeAfter(6px,-2px,scaleY(1),calc(100% + 4px),calc(100% - 12px));
+    }
+    &:hover:before {
+        transform: scaleY(0);
+        transition:0.5s ease-in-out;
+    }
+    &:after {
+        @include beforeAfter (-2px,6px,scaleX(1),calc(100% - 12px),calc(100% + 4px));
+    }
+    &:hover:after {
+        transform: scaleX(0);
+        transition:0.5s 0.5s ease-in-out;
+    }
+    span {
+        position: relative;
+        z-index: 2;
+    }
 }
+
+.smallButtonEffect{
+    font-size: 1rem;
+    padding: 0px 20px;
+}
+
+
+
+
+
+
