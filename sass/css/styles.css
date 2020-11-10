@@ -470,6 +470,33 @@ video {
   height: 100%;
   object-fit: cover; }
 
+.project-container-image {
+  text-align: center; }
+  .project-container-image .project-image {
+    width: 80%;
+    border-radius: 25px; }
+
+.main-container {
+  display: grid;
+  row-gap: 100px;
+  justify-items: center;
+  background-color: #efcccc; }
+  .main-container-title {
+    font-size: 5rem; }
+
+.project-container {
+  width: 80%;
+  border: 10px solid gray;
+  border-radius: 25px;
+  box-shadow: 21px 9px 25px 0px black; }
+  .project-container-title {
+    font-size: 1.5rem; }
+  .project-container-detail {
+    font-size: 1.25rem; }
+    .project-container-detail-link {
+      display: flex;
+      justify-content: space-evenly; }
+
 @media (min-width: 1024px) {
   body .nav-menu {
     flex-direction: column;

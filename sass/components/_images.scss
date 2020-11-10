@@ -6,3 +6,11 @@ video {
     height: 100%;
     object-fit: cover;
 }
+
+.project-container-image {
+    text-align: center;
+    .project-image {
+        width: 80%;
+        border-radius:25px;
+    }
+}

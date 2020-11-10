@@ -1,0 +1,27 @@
+.main-container {
+    display: grid;
+    row-gap: 100px;
+    justify-items: center;
+    background-color:$color-white;
+    &-title {
+        font-size:5rem;
+    }
+}
+.project-container {
+    width: 80%;
+    border: 10px solid gray;
+    border-radius:25px;
+    box-shadow: 21px 9px 25px 0px black;
+
+    &-title {
+        font-size:1.5rem;
+    }
+    &-detail {
+        font-size:1.25rem;
+
+        &-link {
+            display:flex;
+            justify-content: space-evenly;
+        }
+    }
+}
