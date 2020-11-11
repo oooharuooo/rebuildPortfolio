@@ -9,6 +9,10 @@ video {
 
 .project-container-image {
     text-align: center;
+    transition: transform 0.5s;
+    &:hover {
+        z-index: 3;
+    }
     .project-image {
         width: 80%;
         border-radius:25px;
