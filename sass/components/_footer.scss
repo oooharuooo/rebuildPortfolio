@@ -1,0 +1,20 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    align-items: center;
+
+    &Big-social-media {
+        width: 100%;
+    }
+    &-social-media {
+        display: flex;
+        flex-direction: row;
+        place-content: space-evenly;
+    }
+
+    &-copyright {
+        display: flex;
+        flex-direction: row;
+    }
+}
