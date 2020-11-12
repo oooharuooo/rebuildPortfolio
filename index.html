@@ -9,17 +9,26 @@
     <link rel="stylesheet" href="./sass/css/styles.css"/>
 </head>
 <body>
-
+   
     <!-- Nav bar -->
     <header id ="home">
        
         <section class ="page-cover">
+            <a class="toTopButton" onclick="scrollToTop()">
+                <img src="./img/social-media/top.svg" width ="30" alt="topArrow">
+            </a>
             <div class="page-cover-intro">
                 <h2>HELLO, I'M DAT</h2>
                 <h2>
-                    <a class="buttonEffect" href="#projects"><span>Click to see my work</span></a>
+                    <a class="buttonEffect" onclick="scrollToProject()">
+                        <span>Click to see my work</span>
+                    </a>
                 </h2>
-                
+                <h2>
+                    <a class="buttonEffect" target="_blank" href="https://oooharuooo.github.io/DatVThong/Portfolio/Dat_Thong_-_Web_Developer.pdf">
+                        <span>Download my CV</span>
+                    </a>
+                </h2>
             </div>
             <video src="./img/colored-smoke2.mp4" muted autoplay loop type="mp4"></video>
         </section>
@@ -29,13 +38,15 @@
                 <label for="trigger" class="checker"></label>
                 <ul class ="menu">
                     <li>
-                        <a class="buttonEffect smallButtonEffect" href="#home"><span>Home</span></a>
+                        <a class="buttonEffect smallButtonEffect"><span>Home</span></a>
                     </li>
                     <li>
-                        <a class="buttonEffect smallButtonEffect" href="#projects"><span>Projects</span></a>
+                        <a onclick="scrollToProject()" class="buttonEffect smallButtonEffect" ><span>Projects</span></a>
                     </li>
                     <li>
-                        <a class="buttonEffect smallButtonEffect" href="#Contact"><span>Contact</span></a>
+                        <a class="buttonEffect smallButtonEffect" onclick="scrollToContact()">
+                            <span>Contact</span>
+                        </a>
                     </li>
                 </ul>
         </nav>
@@ -225,7 +236,7 @@
                     </li>
                     <li class="contact-container-social-media-list">
                         <a class="nav-link" target="_blank" href="https://oooharuooo.github.io/DatVThong/Portfolio/Dat_Thong_-_Web_Developer.pdf">
-                        <img src="./img/social-media/portfolio.svg" alt="Resume" class="img-thumbnail padding-width">
+                        <img src="./img/social-media/portfolio.svg" class="shakeResume" alt="Resume" class="img-thumbnail padding-width">
                         </a>
                     </li>
                 </ul>
@@ -235,9 +246,6 @@
             <!-- Copyright -->
             <section class="contact-container-copyright">
                 <p>&copy; Copyright 2020 by Dat V Thong</p>
-                <a class="topArrow" href="#home">
-                    <img src="./img/social-media/top.svg" width ="30" alt="topArrow">
-                </a>
             </section>
             <!--/ Copyright -->
         </div>

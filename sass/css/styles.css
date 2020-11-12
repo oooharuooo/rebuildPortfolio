@@ -321,6 +321,9 @@ p {
 /* ============================================= */
 /* Components Imports */
 /* ============================================= */
+a:hover {
+  cursor: pointer; }
+
 li {
   list-style: none; }
 
@@ -368,6 +371,24 @@ li {
 .smallButtonEffect {
   font-size: 1rem;
   padding: 0px 20px; }
+
+.toTopButton {
+  position: fixed;
+  opacity: 0;
+  transition: 0.5s;
+  left: 92%;
+  top: 90%; }
+  .toTopButton.active {
+    opacity: 1; }
+    .toTopButton.active:hover {
+      transition: transform 0.7s;
+      transform: translateY(-5px) scale(1.4);
+      box-shadow: 0px 5px 25px 5px rgba(235, 225, 225, 0.611); }
+
+.shakeResume {
+  animation: shake 5s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px; }
 
 @keyframes rightToLeft {
   0% {
@@ -419,6 +440,16 @@ li {
     opacity: 1;
     transform: translateX(0px); } }
 
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
+
 header {
   position: relative; }
   header .page-cover {
@@ -430,15 +461,19 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden; }
-    header .page-cover h2 {
-      position: relative;
-      font-size: 4rem;
-      color: #efcccc;
-      z-index: 10000;
-      font-family: 'Big Shoulders Stencil Display', cursive;
-      animation: 2s bottomToTop; }
-      header .page-cover h2:nth-child(2) {
-        animation: 3.5s bottomToTop2; }
+    header .page-cover-intro {
+      text-align: center; }
+      header .page-cover-intro h2 {
+        position: relative;
+        font-size: 4rem;
+        color: #efcccc;
+        z-index: 10000;
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        animation: 2s bottomToTop; }
+        header .page-cover-intro h2:nth-child(2) {
+          animation: 3.5s bottomToTop2; }
+        header .page-cover-intro h2:nth-child(3) {
+          animation: 5.5s bottomToTop2; }
   header .nav-menu {
     z-index: 10000;
     position: absolute;
@@ -618,6 +653,8 @@ video {
     display: flex;
     flex-direction: row;
     place-content: space-evenly; }
-  .contact-container-copyright {
-    display: flex;
-    flex-direction: row; }
+    .contact-container-social-media-list:hover {
+      background-color: white;
+      transition: transform 0.7s;
+      transform: translateY(-5px) scale(1.4);
+      box-shadow: 0px 5px 25px 5px rgba(235, 225, 225, 0.611); }

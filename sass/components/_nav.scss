@@ -12,16 +12,23 @@ header {
         align-items: center;
         overflow: hidden;
 
-        h2 {
-            position: relative;
-            font-size: 4rem;
-            color: $color-primary;
-            z-index: 10000;
-            font-family: 'Big Shoulders Stencil Display', cursive;
-            animation: 2s bottomToTop;
-            
-            &:nth-child(2) {
-                 animation: 3.5s bottomToTop2;
+        &-intro {
+            text-align: center;
+
+            h2 {
+                position: relative;
+                font-size: 4rem;
+                color: $color-primary;
+                z-index: 10000;
+                font-family: 'Big Shoulders Stencil Display', cursive;
+                animation: 2s bottomToTop;
+                
+                &:nth-child(2) {
+                     animation: 3.5s bottomToTop2;
+                }
+                &:nth-child(3) {
+                    animation: 5.5s bottomToTop2;
+               }
             }
         }
     }

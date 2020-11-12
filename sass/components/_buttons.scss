@@ -1,4 +1,6 @@
-
+a:hover {
+    cursor: pointer;
+}
 li {
     list-style: none;
 }
@@ -42,8 +44,26 @@ li {
     padding: 0px 20px;
 }
 
+.toTopButton{
+    position:fixed;
+    opacity:0;
+    transition:0.5s;
+    left: 92%;
+    top: 90%;
 
+    &.active {
+        opacity: 1;
+        &:hover {
+            @include hoverEffect;
+        }
+    }
+}
 
+.shakeResume {
+    animation: shake 5s infinite cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
 
 
 

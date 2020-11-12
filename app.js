@@ -1,5 +1,5 @@
-/* Store the element in el */
-const img3Ds = document.querySelectorAll('.effect-3d')
+// 3D Hover effect
+const img3Ds = document.querySelectorAll('.effect-3d');
 // Loop through each img and create 3d hover effect
 const hover3D = img3Ds.forEach(img3D => {
     / Get the height and width of the img /
@@ -35,3 +35,21 @@ const hover3D = img3Ds.forEach(img3D => {
         img3D.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
     })
 })
+
+// toTopButton
+const toTopButton = document.querySelector('.toTopButton');
+window.addEventListener("scroll",() => {
+    toTopButton.classList.toggle("active",window.scrollY > 500)
+})
+
+const scrollToTop = () => scrollEffect(0);
+const scrollToProject = () => scrollEffect(1000);
+const scrollToContact = () => scrollEffect(4000);
+
+// Scrolling effect
+const scrollEffect= (number) => {
+    window.scrollTo({
+       top:number,
+        behavior:"smooth"
+    })
+}

@@ -11,10 +11,12 @@
         display: flex;
         flex-direction: row;
         place-content: space-evenly;
-    }
 
-    &-copyright {
-        display: flex;
-        flex-direction: row;
+        &-list {
+            &:hover{
+                background-color:white;
+               @include hoverEffect;
+            }
+        }
     }
 }
